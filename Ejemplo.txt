@@ -1,3 +1,13 @@
+/* 
+
+Ejemplo de server que atiende peticiones de conexion y
+asigna cada una a un hilo:
+
+https://gist.github.com/silv3rm00n/5821760
+
+
+*/
+
 Socket Client Example
 
 #include <sys/socket.h>
