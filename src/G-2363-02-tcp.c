@@ -9,7 +9,7 @@
 #include <errno.h>
 #include <arpa/inet.h> 
 
-#include "G-2363-NN-tcp.h"
+#include "G-2363-02-tcp.h"
 
 /*Funciones Cliente*/
 int c_connect(char* ip_address, int port){

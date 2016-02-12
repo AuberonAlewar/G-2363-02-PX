@@ -5,7 +5,7 @@ CC=gcc
 CFLAGS=-ggdb -Wall -pedantic -I $(IDIR)
 
 # Group name files
-GR= G-2363-NN-
+GR= G-2363-02-
 
 # DIRECTORIES
 # Headers directory
