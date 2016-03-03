@@ -2,7 +2,7 @@
 CC=gcc
 
 # Compiling options
-CFLAGS=-ggdb -Wall -pedantic -I $(IDIR)
+CFLAGS=-ggdb -Wall -pedantic -pthread -I $(IDIR)
 
 # Group name files
 GR= G-2363-02-
@@ -16,7 +16,7 @@ OBJ = ../obj
 #=============================================================
 # Executables
 #=============================================================
-EXEC= $(GR)cliente-tcp $(GR)server-tcp
+EXEC= $(GR)server-tcp $(GR)cliente-tcp
 
 $(GR)cliente-tcp: $(OBJ)/$(GR)cliente-tcp.o $(OBJ)/$(GR)tcp.o
 	$(CC) $(CFLAGS) -o $(GR)cliente-tcp $(OBJ)/$(GR)cliente-tcp.o $(OBJ)/$(GR)tcp.o
@@ -28,9 +28,6 @@ $(GR)server-tcp: $(OBJ)/$(GR)server-tcp.o $(OBJ)/$(GR)tcp.o
 # Make all
 #=============================================================
 all: $(EXEC)
-	
-#cliente-tcp:  tcp.o cliente-tcp.o Hash.o
-#	$(CC) -o alfa alfa.c lex.yy.o y.tab.o Hash.o
 
 #=============================================================
 # Objects
